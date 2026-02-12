@@ -7,9 +7,9 @@
 ## 1. Introduction: Beyond the Blockchain Paradigm
 Traditional blockchains (Layer 1s) are essentially slow, replicated state machines designed for human financial transactions. They prioritize sequential ordering over semantic consistency and fail to address the complexity of autonomous AI agents.
 
-**Dynamis represents a paradigm shift:** We are not building a "blockchain" in the legacy sense. We are engineering an **Optimized Digital System (ODS)**—a high-performance, quantum-safe operating system designed to govern the **Agentic Economy**.
+**Dynamis represents a paradigm shift:** We are not building a "blockchain" in the legacy sense. We are engineering an **Optimized Digital System (ODS)**, a high-performance, quantum-safe operating system designed to govern the **Agentic Economy**.
 
-Dynamis replaces the brute-force "State Replication" model with a **"Topological Consensus"** model, where local agent states are stitched together mathematically using Sheaf Theory. This allows for massive parallel scalability, verified AI reasoning, and adaptability across domains far beyond simple finance.
+Dynamis replaces the brute-force "State Replication" model with a **"Topological Consensus"** model, where local agent states are stitched together mathematically using Sheaf Theory. This allows for massive parallel scalability, verified AI reasoning, and adaptability across domains far beyond simple finance and transference.
 
 ---
 
@@ -47,29 +47,32 @@ We define computational difficulty not by step-count, but by **Semantic Hardness
 Dynamis is implemented as a high-performance, low-latency system leveraging modern hardware acceleration and language features.
 
 ### 3.1 The "Java 25 + Panama" Advantage
-We reject the false dichotomy between "fast" languages (C++/Rust) and "safe" languages (Java). Using **Project Panama (Foreign Function & Memory API)**, Dynamis achieves C++ performance with Java safety.
+We reject the false dichotomy between "fast" languages (C++/Rust) and "safe" languages (Java). Using **Project Panama (Foreign Function & Memory API)**, Dynamis achieves C++ performance with Java safety. We have in mind the following to implement using the full force of Java 25 to accomplish the following:
 *   **Zero-Copy Networking:** Data moves from the network card to the memory arena without JVM heap allocation.
 *   **Explicit Memory Management:** Critical path structures use off-heap `Arena` allocation, eliminating Garbage Collection (GC) pauses during consensus.
 
-### 3.2 "Aerotech" & "Sarasate's Bow" (Native Acceleration)
+### 3.2 "Aerotech" & "Sarasate's Bow" (Native Acceleration) aka Pereguine
 Our cryptographic engine is built for the **Post-Quantum Era**, optimized for AVX-512 hardware (e.g., Google Cloud C3).
-*   **"Sarasate's Bow" (Dilithium-3):** A NIST-standard Post-Quantum signature scheme. We use AVX-512 vector instructions to verify **14,625 signatures per second** per core, protecting the network against future quantum decryption threats.
-*   **"Aerotech" (Blake3):** A vector-optimized hashing engine that processes **2.5 Million hashes/second**. It uses the 512-bit wide registers of modern CPUS to parallelize Merkle Tree construction.
+*   **"Sarasate's Bow" (Dilithium-3):** A NIST-standard Post-Quantum signature scheme. Making use of SIMD, from Neon on ARM technologies to AVX-512 vector instructions, we can verify **14,625 Post-Quantum safe signatures per second** per core, protecting the network against future decryption threats.
+*   **"Aerotech" (Blake3):** A vector-optimized hashing engine that processes **2.5+ Million hashes/second**. It is able to make use of Neon, AV2, and AVX-512-bit wide registers of modern CPUS to parallelize Merkle Tree construction.
+*   Both solutions are also able to scale with the use of GPU acceleration, with Cuda and Metal implementations available.
+*   Leveraging concurrency and batching, the numbers seen above are the performance metrics with local Docker instances (2cpu/4gb) and are expected to scale even higher with better technology.
 
-### 3.3 The WASM "Hypervisor"
+### 3.3 The WASM "Hypervisor" aka Hummingbird
 Dynamis acts as a hypervisor for autonomous code.
 *   User logic (Smart Contracts, Agent behaviors) is compiled to **WebAssembly (WASM)**.
 *   We use **GraalWasm** to JIT-compile this bytecode to native machine code at runtime, running at near-native speed while remaining sandboxed.
 *   This makes Dynamis **Polyglot**: Developers can write agents in Rust, Zig, or AssemblyScript.
+*   Along with the agentic portion, users are able to deploy their independent projects as a distinct instance that is the equivalent of a L2 on other blockchains with a tiered level of memory usage, from committment to the L1 as an inscription onto an ephemeral level that could support gaming, HFT, and other intense applications that utilize 100k OPs/sec making use of the trust bonding mechanic for gasless operation as well as session keys.
 
 ---
 
 ## 4. Holoflux: The AI Oracle Layer
 
-The "Killer Feature" of Dynamis is **Holoflux**—the bridge between the deterministic world of the ledger and the probabilistic world of AI.
+A "Killer Feature" of Dynamis is **Holoflux** which may serve as the bridge between the deterministic world of the ledger and the probabilistic world of AI.
 
 *   **Problem:** AI Agents hallucinate. They have no "source of truth."
-*   **Solution:** Holoflux is designed to allow agents to query external Foundation Models (Vertex AI, GPT-4) and receive a **Cryptographically Verified Inference**.
+*   **Solution:** Holoflux is designed to allow agents to query external Foundation Models (Gemini, Vertex AI, GPT, etc) and receive a **Cryptographically Verified Inference**.
 *   **Mechanism:** The inference result is treated as a "proposal" in the Sheaf. In the fully realized architecture, Validators will run a geometric consistency check (leveraging Sheaf Theory) to ensure the AI's output is semantically consistent with the agent's history and the network's topology. This aims to create an **"Immutable Memory"** for AI swarms.
 
 ---
@@ -80,7 +83,7 @@ Dynamis is an abstract "Trust Engine" applicable to any system requiring distrib
 
 ### 5.1 Financial Systems (DeFi)
 *   **Use Case:** High-Frequency Trading (HFT) and automated market making.
-*   **Advantage:** **30,000 TPS** and sub-second finality allow for order book exchanges that rival centralized implementations (NASDAQ), but with total transparency and no custodial risk.
+*   **Advantage:** **30,000 TPS** on the Hummingbird L2 and sub-second finality allow for order book exchanges that rival centralized implementations (NASDAQ), but with total transparency and no custodial risk.
 
 ### 5.2 Agentic Economy (AI Swarms)
 *   **Use Case:** Fleets of autonomous coding agents or supply chain bots negotiating contracts.
@@ -100,10 +103,10 @@ Dynamis is an abstract "Trust Engine" applicable to any system requiring distrib
 
 | Feature | Legacy Blockchain (Ethereum) | High-Perf L1 (Solana) | Agent Frameworks (LangChain) | **Dynamis (ODS)** |
 | :--- | :--- | :--- | :--- | :--- |
-| **Consensus** | Global State Replication (Slow) | Proof of History (Fast) | None (Centralized) | **Topological Consistency ($H^0$)** |
+| **Consensus** | Global State Replication (Slow) | Proof of History (Fast) | None (Centralized) | **Topological Consistency ($H^0$) + Discrete Proof of History** |
 | **Security** | ECC (Quantum Vulnerable) | ECC (Quantum Vulnerable) | None | **Dilithium-3 (Post-Quantum)** |
 | **AI Integration** | None (Oracles are slow) | None | Native | **Holoflux (Zero-Copy Oracle)** |
-| **Architecture** | EVM (Single Threaded) | Sealevel (Multi-Threaded) | Python Scripts | **Java 25 + AVX-512 Native** |
+| **Architecture** | EVM (Single Threaded) | Sealevel (Multi-Threaded) | Python Scripts | **Java 25 + AVX-512 Native and GPU Acceleration** |
 | **Math Basis** | Game Theory | Clock Synchronization | Probability | **Category Theory (Topos)** |
 
 ### The "Sarasate" Advantage
@@ -113,6 +116,6 @@ While others are optimizing for today's hardware, Dynamis is optimized for **tom
 
 ## 7. Conclusion
 
-Dynamis is not just a blockchain; it is a **Mathematical Trust Infrastructure**. By fusing the rigor of Topos Theory with the raw power of AVX-512 hardware and the flexibility of AI Agents, we are building the first **Optimized Digital System** capable of hosting the next generation of the internet—the Agentic Web.
+Dynamis does not leverage with blockchain technology; it provides a **Mathematical Trust Infrastructure**. By fusing the rigor of Topos Theory with the raw power of AVX-512 and GPU hardware along with the flexibility of AI Agents, we are building the first **Optimized Digital System** capable of hosting the next generation of the internet—the Agentic Web.
 
 *"We don't just process transactions; we compute the geometry of agreement."*
