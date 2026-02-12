@@ -30,10 +30,10 @@ Trust Economics governs:
 |:------------|:----------------------------|
 | Use tokenomics to secure a ledger | Use economics to allocate trust and resources |
 
-If Dynamis is *infrastructure-as-trust*, the token cannot be:
-- ❌ Just a speculative asset
-- ❌ Just gas
-- ❌ Just staking for yield
+If Dynamis is to be *infrastructure-as-trust*, the token cannot be:
+- Just a speculative asset
+- Just gas
+- Just staking for yield
 
 It must behave as:
 
@@ -54,9 +54,9 @@ Think of the token as a **trust bandwidth unit**, not money.
 
 ### It Is Not For:
 
-- ❌ Speculation
-- ❌ Farming yield
-- ❌ Governing vibes
+- Speculation
+- Farming yield
+- Governing vibes
 
 ---
 
@@ -141,7 +141,7 @@ This allows Dynamis to serve heterogeneous markets simultaneously.
 
 ---
 
-## Trust Bonding (Replacing Staking)
+## Trust Bonding- A Replacement for Staking
 
 ### Bonding as Risk Commitment
 
@@ -179,7 +179,7 @@ Reputation is:
 - Fast to lose
 - Non-transferable
 
-> This breaks plutocracy.
+> This helps break plutocracy.
 
 ---
 
@@ -204,17 +204,17 @@ This naturally throttles misuse.
 
 ### Baseline Supply
 
-**1 billion DYN** as a conservative baseline:
+**1 billion DYN** as the conservative baseline:
 - Avoids microscopic units
 - Supports enterprise-scale accounting
 - Allows fine-grained bonding and reputation weighting
 - Doesn't force early scarcity theatrics
 
-### Why Pure Fixed Supply Is Problematic
+### Why A Pure Fixed Supply Is Problematic
 
 Fixed supply works well when the token's job is:
-- Store value
-- Gate participation
+- To store value
+- To gate participation
 
 It works poorly when the token's job is:
 - Allocate verification capacity over decades
@@ -227,15 +227,15 @@ It works poorly when the token's job is:
 ### The Right Structure: Capacity-Coupled Elasticity
 
 Supply expansion is:
-- ✅ Tied to measurable capacity increases
-- ✅ Triggered by system events, not time
-- ✅ Delayed and auditable
-- ✅ Reversible if capacity shrinks
+- Tied to measurable capacity increases
+- Triggered by system events, not time
+- Delayed and auditable
+- Reversible if capacity shrinks
 
 Not:
-- ❌ Discretionary governance minting
-- ❌ Annual inflation
-- ❌ Yield farming
+- Discretionary governance minting
+- Annual inflation
+- Yield farming
 
 ---
 
@@ -280,11 +280,11 @@ Minting is **event-driven, not time-driven**.
 - Hash function transitions
 - Signature scheme rotations
 
-> Extremely rare — and that's the point.
+> Extremely rare, and that's the point.
 
 ---
 
-## Minting Guardrails (What Prevents Abuse)
+## Minting Guardrails (What We Expect to Prevent Abuse)
 
 ### Guardrail 1 — Capacity-Coupled Upper Bounds
 
@@ -380,23 +380,22 @@ Capacity → Verification → Reputation → Authority → Capacity
 
 ## What the Token Is Not
 
-Be explicit:
-- ❌ Not a governance token first
-- ❌ Not a yield instrument
-- ❌ Not a memecoin
-- ❌ Not "gas but faster"
+To be explicit:
+- Not a governance token first
+- Not a yield instrument
+- Not a memecoin
+- Not "gas but faster"
 
-Those models clash with the positioning.
-
----
-
-## The One-Sentence Summary
-
-> "Dynamis still uses a native token, but it's not for speculation or yield — it's a mechanism for allocating verification capacity, reputation, and long-lived trust across the system."
 
 ---
 
-## Supply & Demand Mapping (Without Prices)
+## A One-Sentence Summary
+
+> "Dynamis still uses a native token, but it's not for speculation or yield but a mechanism for allocating verification capacity, reputation, and long-lived trust across the system."
+
+---
+
+## Supply & Demand Mapping Without Prices
 
 ### Axes
 
