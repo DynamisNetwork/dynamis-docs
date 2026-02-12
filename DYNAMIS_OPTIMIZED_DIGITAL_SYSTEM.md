@@ -58,7 +58,12 @@ Our cryptographic engine is built for the **Post-Quantum Era**, optimized for AV
 *   Both solutions are also able to scale with the use of GPU acceleration, with Cuda and Metal implementations available.
 *   Leveraging concurrency and batching, the numbers seen above are the performance metrics with local Docker instances (2cpu/4gb) and are expected to scale even higher with better technology.
 
-### 3.3 The WASM "Hypervisor" aka Hummingbird
+### 3.3 Post-Quantum Readiness
+*   As mentioned elsewhere, Dynamis is designed to be Post-Quantum from the beginning.
+*   ML-KEM-768 is used to encapsulate transactions, inscriptions, and other sensitive information.
+*   Dilithium 3 is used to provide PQ signatures, optimized to maintain competitive signatures per second with classical algorithms.
+
+### 3.4 The WASM "Hypervisor" aka Hummingbird
 Dynamis acts as a hypervisor for autonomous code.
 *   User logic (Smart Contracts, Agent behaviors) is compiled to **WebAssembly (WASM)**.
 *   We use **GraalWasm** to JIT-compile this bytecode to native machine code at runtime, running at near-native speed while remaining sandboxed.
@@ -83,7 +88,7 @@ Dynamis is an abstract "Trust Engine" applicable to any system requiring distrib
 
 ### 5.1 Financial Systems (DeFi)
 *   **Use Case:** High-Frequency Trading (HFT) and automated market making.
-*   **Advantage:** **30,000 TPS** on the Hummingbird L2 and sub-second finality allow for order book exchanges that rival centralized implementations (NASDAQ), but with total transparency and no custodial risk.
+*   **Advantage:** **30,000 TPS** on the Hummingbird L2 and sub-second finality allow for order book exchanges that rival centralized implementations (NASDAQ), but with total transparency and no custodial risk. With ML-KEM-768, all transaction are encrypted and cannot be targeted for sandwich or other types MEV attacks.
 
 ### 5.2 Agentic Economy (AI Swarms)
 *   **Use Case:** Fleets of autonomous coding agents or supply chain bots negotiating contracts.
@@ -91,7 +96,7 @@ Dynamis is an abstract "Trust Engine" applicable to any system requiring distrib
 
 ### 5.3 Supply Chain & Logistics
 *   **Use Case:** Tracking provenance of goods across multiple untrusted carriers.
-*   **Advantage:** Topos theory naturally models "local truth" (e.g., a shipping container's status is only known locally by the ship). The "Gluing Condition" ensures that when the container is handed off, the digital records match physically.
+*   **Advantage:** Topos theory naturally models "local truth" (e.g., a shipping container's status is only known locally by the ship). The "Gluing Condition" ensures that when the container is handed off, the digital records match physically, with committed information encapsulated with ML-KEM-768.
 
 ### 5.4 Governance & Voting
 *   **Use Case:** DAO governance or corporate secure voting.
@@ -104,7 +109,7 @@ Dynamis is an abstract "Trust Engine" applicable to any system requiring distrib
 | Feature | Legacy Blockchain (Ethereum) | High-Perf L1 (Solana) | Agent Frameworks (LangChain) | **Dynamis (ODS)** |
 | :--- | :--- | :--- | :--- | :--- |
 | **Consensus** | Global State Replication (Slow) | Proof of History (Fast) | None (Centralized) | **Topological Consistency ($H^0$) + Discrete Proof of History** |
-| **Security** | ECC (Quantum Vulnerable) | ECC (Quantum Vulnerable) | None | **Dilithium-3 (Post-Quantum)** |
+| **Security** | ECC (Quantum Vulnerable) | ECC (Quantum Vulnerable) | None | **Dilithium-3 + ML-KEM-768 (Kyber) (Post-Quantum)** |
 | **AI Integration** | None (Oracles are slow) | None | Native | **Holoflux (Zero-Copy Oracle)** |
 | **Architecture** | EVM (Single Threaded) | Sealevel (Multi-Threaded) | Python Scripts | **Java 25 + AVX-512 Native and GPU Acceleration** |
 | **Math Basis** | Game Theory | Clock Synchronization | Probability | **Category Theory (Topos)** |
